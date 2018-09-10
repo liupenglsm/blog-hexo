@@ -16,15 +16,18 @@
 - CNAME永久驻留  
 ```npm install hexo-generator-cname --save```  
 ```
-在_config.yml中添加：
+在_config.yml中添加（可选）：
 Plugins:
 - hexo-generator-cname
 ```
 - 本地搜索  
 ```npm install hexo-generator-search --save```
 ```
-在_config.yml中添加：
+在_config.yml中添加（可选）：
 search:
   path: search.xml
   field: post
 ```
+### 配置SSH
+- 我的百度云下载ssh压缩文件
+- 覆盖C:\Users\Administrator\.ssh文件
