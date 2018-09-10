@@ -3,14 +3,12 @@
 ### 2.安装Node.js
 [Node.js安装及环境配置之Windows篇](https://www.jianshu.com/p/03a76b2e7e00 )
 ### 3.安装hexo
-- 创建文件夹  
-```blog-hexo```
+- 拉取项目  
+```git clone https://github.com/liupenglsm/blog-hexo.git```
 - 执行命令  
-```npm install hexo -g```
+```npm install hexo -save```
 - 检查环境  
 ```hexo -v```
-- 初始化该文件夹  
-```hexo init```
 - 安装所需要的主键  
 ```npm install```  
 - 快速部署插件  
