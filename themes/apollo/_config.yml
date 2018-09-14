@@ -4,12 +4,13 @@ menu:
   Archives: /archives
   About: /about
 
-# Content
+# Show more
 excerpt_link: Read More
+
+# Show photo
 fancybox: true
 
 # Miscellaneous
-google_analytics: true
 favicon: /favicon.png
 
 # Social accounts

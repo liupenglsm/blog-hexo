@@ -1,0 +1,29 @@
+<article id="<%= post.layout %>-<%= post.slug %>" class="post">
+	<footer class="entry-meta-header">
+		<img src="/images/header.png" alt="头像"/>
+		<div id="follow-icons">
+		  <% if (theme.github) { -%>
+		    <a href="http://github.com/<%- theme.github %>" target="view_window"><i class="fa fa-github-square fa-2x"></i></a>
+		  <% } -%>
+		  <% if (theme.weibo) { -%>
+		    <a href="http://weibo.com//<%- theme.weibo %>" target="view_window"><i class="fa fa-weibo fa-2x"></i></a>
+		  <% } -%>
+		  <% if (theme.rss) { -%>
+		    <a href="<%- theme.rss%>" target="view_window"><i class="fa fa-rss-square fa-2x"></i></a>
+		  <% } -%>
+		</div>
+	</footer>
+	<%- partial('post/gallery') %>
+	<header class="entry-header">
+		<%- partial('post/title', {class_name: 'article-title'}) %>
+	</header>
+	<div class="entry-content">
+    	<%- post.content %>
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span>
+			</span>
+		</div>
+	</footer>
+</article>
