@@ -28,7 +28,7 @@ search:
   path: search.xml
   field: post
 ```
-- hexo博客安装RSS插件
+- hexo博客安装RSS插件   
 ```npm install hexo-generator-feed```
 ```
 # Extensions
