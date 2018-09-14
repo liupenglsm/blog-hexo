@@ -28,6 +28,19 @@ search:
   path: search.xml
   field: post
 ```
+```npm install hexo-generator-feed```
+```
+# Extensions
+## Plugins: http://hexo.io/plugins/
+#RSS订阅
+plugin:
+- hexo-generator-feed
+#Feed Atom
+feed:
+type: atom
+path: atom.xml
+limit: 20
+```
 ### 配置SSH
 - 我的百度云下载ssh压缩文件
 - 覆盖C:\Users\Administrator\.ssh文件
