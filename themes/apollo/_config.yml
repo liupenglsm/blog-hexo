@@ -3,12 +3,16 @@ menu:
   Home: /
   Archives: /archives
   About: /about
-rss: /atom.xml
 
 # Content
 excerpt_link: Read More
 fancybox: true
 
 # Miscellaneous
-google_analytics:
+google_analytics: true
 favicon: /favicon.png
+
+# Social accounts
+github: liupenglsm
+weibo: liupenglsm
+rss: /atom.xml

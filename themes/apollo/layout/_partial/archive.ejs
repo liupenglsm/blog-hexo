@@ -1,48 +1,12 @@
-<% if (pagination == 1){
-		page.posts.each(function(post){ %>
-		<%- partial('article', {post: post, index: true}) %>
-<%      }) 
+<%  if (pagination == 2){
+	  	page.posts.each(function(post){ %>
+	    	<%- partial('article', {post: post, index: true}) %>
+<%    	}) 
 		if (page.total > 1){ %>
-			<nav id="page-nav">
-			<%- paginator({
-					prev_text: '&laquo; Prev',
-					next_text: 'Next &raquo;'
-				}) %>
-			</nav>
+        	<nav id="page-nav">
+          		<%- paginator({prev_text: '&laquo; Prev', next_text: 'Next &raquo;'}) %>    
+        	</nav>
 <%		}
-	} else if (pagination == 2){
-		page.posts.each(function(post){ %>
-		<%- partial('article', {post: post, index: true}) %>
-<% 		})
 	} else { %>
-  <div class="archive">
-    <% var tempDate = '' %>
-    <% page.posts.each(function(item){ %>
-	  <% var lastTempDate = item.date.format(config.date_format) %>
-      <article class="<%= item.layout %> post">
-        <footer class="entry-meta-header">
-          <span class="meta-elements date">
-            <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><% if (lastTempDate != tempDate){ tempDate = lastTempDate %><%= lastTempDate %><% } %></a></time>
-          </span>
-        </footer>
-        <div class="entry-content">
-          <header>
-            <% if (item.title){ %>
-              <% if (item.link){ %>
-                <% if (item.title){ %>
-                  <h1 class="title link"><a href="<%- item.link %>" target="_blank"><%= item.title %></a></h1>
-                <% } else { %>
-                  <h1 class="title link"><a href="<%- item.link %>" target="_blank"><%= item.link %></a></h1>
-                <% } %>
-              <% } else { %>
-                <h1><a href="<%- config.root %><%- item.path %>"><%= item.title %></a></h1>
-              <% } %>
-            <% } else { %>
-                <h1>(No title)</h1>
-            <% } %>
-          </header>
-        </div>
-      </article>
-    <% }); %>
-  </div>
-<% } %>
+        <%- partial('content') %>
+<%  } %>
