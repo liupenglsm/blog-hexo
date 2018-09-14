@@ -20,9 +20,12 @@
 		title = 'Home';
 	}
 %>
-  <title><%= title %> | <%= config.title %></title>
-  <meta name="viewport" content="width=device-width">
-  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"> 
-<%- css('css/style') %>
+	<title><%= title %> | <%= config.title %></title>
+	<meta name="viewport" content="width=device-width">
+	<link href="<%- config.root %>css/share/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+<%- css('css/style/style') %>
+
+	<script src="<%- config.root %>js/jquery.min.js"></script>
+<%- js('js/script') %>
 
 </head>
