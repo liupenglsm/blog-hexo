@@ -18,9 +18,14 @@
 // 02110-1301 USA
 // 
 
-var searchFunc = function (path, search_id, content_id) {
+var searchFunc = function (path, search_id, content_id, isMobile) {
   'use strict';
-  var BTN = "<i id='local-search-close'>x</i>";
+  if(isMobile){
+    var BTN = "<i id='m-local-search-close'>x</i>";
+  }else{
+    var BTN = "<i id='local-search-close'>x</i>";
+  }
+  
   $.ajax({
     url: path,
     dataType: "xml",

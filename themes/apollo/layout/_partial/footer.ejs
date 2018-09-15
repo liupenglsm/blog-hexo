@@ -1,8 +1,8 @@
 <div class="mb-search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="<%= __('Search') %>">
-    <input type="hidden" name="q" value="site:<%- config.url.replace(/^https?:\/\//, '') %>">
+  <form accept-charset="utf-8">
+    <input type="search" name="q" placeholder="<%= __('Search') %>" class="m-search-form-input" id="m-local-search-input">
   </form>
+  <div id="m-local-search-result" class="m-local-search-result-cls"></div>
 </div>
 <footer id="footer">
 	<h1 class="footer-blog-title">

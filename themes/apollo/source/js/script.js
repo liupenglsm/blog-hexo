@@ -15,7 +15,33 @@
     }, searchAnimDuration);
   };
 
-  searchFunc("/search.xml", 'local-search-input', 'local-search-result');
+  var isMobile = {
+    Android: function () {
+      return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function () {
+      return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function () {
+      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function () {
+      return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function () {
+      return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function () {
+      return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+  };
+
+  if(isMobile.any()){
+    searchFunc("/search.xml", 'm-local-search-input', 'm-local-search-result', true);
+  }else{
+    searchFunc("/search.xml", 'local-search-input', 'local-search-result', false);
+  }
+  
 
   $('#nav-search-btn').on('click', function(){
     if (isSearchAnim) return;
@@ -41,6 +67,18 @@
       startSearchAnim();
       $searchWrap.removeClass('on');
       stopSearchAnim();
+  });
+
+  $('.m-search-form-input').on('blur', function(){
+    if($('.search-result-list').length <= 0){
+      $('#m-local-search-input').val('');
+      $('#m-local-search-result').html('');
+    }
+  });
+
+ $('.m-local-search-result-cls').on('click', function(){
+      $('#m-local-search-input').val('');
+      $('#m-local-search-result').html('');
   });
   // Share
   // $('body').on('click', function(){
