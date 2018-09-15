@@ -15,6 +15,9 @@
 		</ul>
 	</nav>
 	<div id="search-form-wrap">
-		<%- search_form({button: '&#xF002;'}) %>
+		<form accept-charset="UTF-8" class="search-form">
+			<input type="search" name="q" class="search-form-input" placeholder="Search" id="local-search-input">
+		</form>
+		<div id="local-search-result" class="local-search-result-cls"></div>
 	</div>
 </header>

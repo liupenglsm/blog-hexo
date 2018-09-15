@@ -77,26 +77,23 @@ pagination_dir: page
 theme: apollo
 
 # Deployment
-## Docs: https://hexo.io/docs/deployment.html
+#plugin: hexo-deployer-git  
 deploy:
   type: git
   repository: git@github.com:liupenglsm/blog.git
   branch: master
 
-#CNAME
-Plugins:
-- hexo-generator-cname
+#CNAME-域名
+#plugin: hexo-generator-cname
 
+#站内search
+#plugin: hexo-generator-search  
 search:
-  path: search.json
+  path: search.xml
   field: post
 
-# Extensions
-## Plugins: http://hexo.io/plugins/
 #RSS订阅
-plugin:
-- hexo-generator-feed
-#Feed Atom
+#plugin: hexo-generator-feed
 feed:
 type: atom
 path: atom.xml
