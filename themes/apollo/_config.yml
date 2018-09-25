@@ -17,3 +17,15 @@ favicon: /favicon.png
 github: liupenglsm
 weibo: liupenglsm
 rss: /atom.xml
+
+#gitment
+gitment: false
+owner: liupenglsm
+repo: blog-commit
+client_id: 86a20abd3dbe7538948e
+client_secret: dc390f361f93e2c22b83d173ef4e6a219cfeec71
+
+#valine
+valine: true
+app_id: TkHRz0BCzq1tExUxH9nRSNcl-gzGzoHsz
+app_key: 5ttAb6LSYOtxt1dSqvEH0RPN

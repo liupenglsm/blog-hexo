@@ -1,0 +1,15 @@
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<div class="valine"></div>
+<script>
+	new Valine({
+		el: '.valine',
+		notify: true,
+		verify: true,
+		visitor: true,
+		app_id: '<%- theme.app_id %>',
+		app_key: '<%- theme.app_key %>',
+		placeholder: 'Please fill out your comments',
+		lang:'en'
+	});
+</script>

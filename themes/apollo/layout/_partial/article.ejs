@@ -32,8 +32,24 @@
 		</div>
 	</footer>
 	<% if (!index){ %>
-    <%- partial('post/nav') %>
-  <% } %>
+		<%- partial('post/nav') %>
+		
+		<% if (theme.valine){ %>
+			<% if (post.comments){ %>
+				<%- partial('post/valine') %>
+			<% } else {%>
+				<div class="comment"></div>
+			<% } %>
+		<% } %>
+		
+		<% if (theme.gitment){ %>
+			<% if (post.comments){ %>
+				<%- partial('post/gitment') %>
+			<% } else {%>
+				<div class="gitment"></div>
+			<% } %>
+		<% } %>
+	<% } %>
 </article>
 
 <% if (index){ %>
