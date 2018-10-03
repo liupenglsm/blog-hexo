@@ -1,0 +1,15 @@
+.entry-content tr th {
+    background: #ccc
+}
+
+.entry-content table tr:nth-child(even){
+	background: #ded
+}
+
+.entry-content code {
+	background: #ddd
+}
+
+.entry-content table  tr code {
+	background-color:transparent
+}
